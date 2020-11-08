@@ -7,17 +7,26 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('@/views/Home.vue')
+    component: () => import('@/views/Home.vue'),
+    meta: {
+      layout: 'AppLayoutHome'
+    }
   },
   {
     path: '/about',
     name: 'About',
-    component: () => import('@/views/About.vue')
+    component: () => import('@/views/About.vue'),
+    meta: {
+      layout: 'AppLayoutAbout'
+    }
   },
   {
     path: '/contacts',
     name: 'Contacts',
-    component: () => import('@/views/Contacts.vue')
+    component: () => import('@/views/Contacts.vue'),
+    meta: {
+      layout: 'AppLayoutContacts'
+    }
   }
 ]
 
