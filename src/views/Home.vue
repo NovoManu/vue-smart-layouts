@@ -1,11 +1,14 @@
 <template>
-  <div>
-    <h1>This is a home page</h1>
-  </div>
+  <MyLayout>
+    <h1>Here is my page content</h1>
+  </MyLayout>
 </template>
 
 <script>
+import MyLayout from '@/layouts/MyLayout.vue'
+
 export default {
-  name: 'Home'
+  name: 'MyPage',
+  components: { MyLayout }
 }
 </script>
