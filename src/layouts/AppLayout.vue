@@ -8,26 +8,10 @@ const defaultLayout = 'AppLayoutDefault'
 
 export default {
   name: "AppLayout",
-  data() {
-    return {
-      layout: defaultLayout
-    }
-  },
   computed: {
-    usedLayout() {
-      try {
-        return () => import(`@/layouts/${this.layout}.vue`)
-      } catch (e) {
-        throw Error('Layout is not found')
-      }
-    }
-  },
-  watch: {
-    $route: {
-      immediate: true,
-      handler(route) {
-        this.layout = route.meta.layout || defaultLayout
-      }
+    layout() {
+      const layout = this.$route.meta.layout || defaultLayout
+      return () => import(`@/layouts/${layout}.vue`)
     }
   }
 }
