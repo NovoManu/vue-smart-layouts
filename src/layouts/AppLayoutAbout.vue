@@ -18,6 +18,6 @@ export default {
 <style scoped>
 .header {
   height: 5rem;
-  color: blue;
+  background-color: blue;
 }
 </style>
