@@ -27,6 +27,11 @@ const routes = [
     meta: {
       layout: 'AppLayoutContacts'
     }
+  },
+  {
+    path: '/test',
+    name: 'Test',
+    component: () => import('@/views/Home.vue')
   }
 ]
 
