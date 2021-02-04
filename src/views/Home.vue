@@ -5,12 +5,10 @@
 </template>
 
 <script>
-import AppLayoutHome from '@/layouts/AppLayoutHome'
 
 export default {
   name: 'Home',
   components: {
-    AppLayoutHome
   }
 }
 </script>

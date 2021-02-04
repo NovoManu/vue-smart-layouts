@@ -1,13 +1,10 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-
-Vue.use(VueRouter)
+import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('@/views/Home.vue'),
+    component: () => import(/* webpackChunkName "home" */ '@/views/Home.vue'),
     meta: {
       layout: 'AppLayoutHome'
     }
@@ -15,7 +12,7 @@ const routes = [
   {
     path: '/about',
     name: 'About',
-    component: () => import('@/views/About.vue'),
+    component: () => import(/* webpackChunkName "about" */ '@/views/About.vue'),
     meta: {
       layout: 'AppLayoutAbout'
     }
@@ -23,7 +20,7 @@ const routes = [
   {
     path: '/contacts',
     name: 'Contacts',
-    component: () => import('@/views/Contacts.vue'),
+    component: () => import(/* webpackChunkName "contacts" */ '@/views/Contacts.vue'),
     meta: {
       layout: 'AppLayoutContacts'
     }
@@ -31,13 +28,12 @@ const routes = [
   {
     path: '/test',
     name: 'Test',
-    component: () => import('@/views/Home.vue')
+    component: () => import(/* webpackChunkName "home" */ '@/views/Home.vue')
   }
 ]
 
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
   routes
 })
 
