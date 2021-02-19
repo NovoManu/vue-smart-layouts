@@ -15,5 +15,5 @@ npm run serve
 npm run build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Vue3
+Vue3 version is here https://github.com/NovoManu/vue-smart-layouts/tree/vue3
